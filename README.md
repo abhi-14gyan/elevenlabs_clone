@@ -166,6 +166,41 @@ A modern text-to-speech application built with Next.js and Flask, supporting bot
 
 - `GET /api/audio/{language}` - Proxy to Flask API with fallback
 
+## 🗃️ Database Setup
+
+### Local Development
+```bash
+# Start MongoDB locally
+mongod
+
+# Or use MongoDB Compass GUI
+```
+
+### Production Setup (MongoDB Atlas)
+
+1. **Create MongoDB Atlas Account**
+   - Go to [MongoDB Atlas](https://www.mongodb.com/atlas)
+   - Create a free cluster (512MB free tier)
+
+2. **Configure Database Access**
+   - Create database user with read/write permissions
+   - Add your IP to Network Access (or 0.0.0.0/0 for all IPs)
+
+3. **Get Connection String**
+   ```
+   mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/elevenlabs_clone?retryWrites=true&w=majority
+   ```
+
+4. **Migrate Local Data to Production**
+   ```bash
+   # Set production MongoDB URI
+   set PROD_MONGO_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/elevenlabs_clone
+   
+   # Run migration script
+   cd scripts
+   python migrate_to_production.py
+   ```
+
 ## 🗃️ Database Schema
 
 ### Audio Files Collection

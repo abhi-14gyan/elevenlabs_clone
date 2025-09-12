@@ -19,10 +19,21 @@ MONGO_URI = os.getenv('MONGO_URI', 'mongodb://localhost:27017/')
 DATABASE_NAME = os.getenv('DATABASE_NAME', 'elevenlabs_clone')
 
 try:
-    client = MongoClient(MONGO_URI)
+    # Add connection timeout and server selection timeout for production
+    client = MongoClient(
+        MONGO_URI,
+        serverSelectionTimeoutMS=5000,  # 5 second timeout
+        connectTimeoutMS=10000,         # 10 second connection timeout
+        socketTimeoutMS=20000           # 20 second socket timeout
+    )
+    
+    # Test the connection
+    client.admin.command('ping')
+    
     db = client[DATABASE_NAME]
     audio_collection = db.audio_files
     print(f"Connected to MongoDB: {DATABASE_NAME}")
+    print(f"MongoDB URI: {MONGO_URI[:20]}...")  # Log partial URI for debugging
 except Exception as e:
     print(f"Failed to connect to MongoDB: {e}")
     db = None
