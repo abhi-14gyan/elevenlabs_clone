@@ -1,13 +1,15 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "elevenlabs-clone",
+  "version": "1.0.0",
+  "description": "ElevenLabs Clone - Text to Speech Application with English and Arabic support",
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "deploy": "vercel --prod"
+    "deploy": "vercel --prod",
+    "vercel:build": "next build"
   },
   "dependencies": {
     "@radix-ui/react-label": "latest",

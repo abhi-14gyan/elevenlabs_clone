@@ -1,1 +1,1 @@
-web: python scripts/flask_api.py
+web: gunicorn --chdir scripts flask_api:app --bind 0.0.0.0:$PORT
