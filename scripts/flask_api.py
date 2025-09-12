@@ -8,10 +8,10 @@ app = Flask(__name__)
 
 # Configure CORS for production
 if os.getenv('FLASK_ENV') == 'production':
-    # In production, allow your Vercel domain (will be updated during deployment)
+    # In production, allow your Vercel domain
     allowed_origins = [
         "https://*.vercel.app",
-        "https://your-elevenlabs-clone.vercel.app"  # Update this with your actual domain
+        os.getenv('VERCEL_URL', 'https://*.vercel.app')  # Will be set from environment
     ]
     CORS(app, origins=allowed_origins, supports_credentials=True)
 else:
