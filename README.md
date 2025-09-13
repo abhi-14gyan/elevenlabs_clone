@@ -13,8 +13,8 @@ A modern text-to-speech application built with Next.js and Flask, supporting bot
 
 ## 🚀 Live Demo
 
-- **Frontend**: [Deployed on Vercel](https://your-app.vercel.app)
-- **Backend API**: [Deployed on Railway/Heroku](https://your-flask-api.railway.app)
+- **Frontend**: [Deployed on Vercel]([https://your-app.vercel.app](https://elevenlabs-clone-kappa.vercel.app/))
+- **Backend API**: [Deployed on Railway/Heroku]([https://your-flask-api.railway.app](https://web-production-e2459.up.railway.app/))
 
 ## 🛠️ Tech Stack
 
@@ -262,4 +262,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email your-email@example.com or create an issue on GitHub.
+For support, email abhi.14gyan@gmail.com or create an issue on GitHub.
