@@ -14,7 +14,7 @@ A modern text-to-speech application built with Next.js and Flask, supporting bot
 ## 🚀 Live Demo
 
 - **Frontend**: [Deployed on Vercel](https://elevenlabs-clone-kappa.vercel.app/)
-- **Backend API**: [Deployed on Railway/Heroku](https://web-production-e2459.up.railway.app/)
+- **Backend API**: [Deployed on Railway](https://web-production-e2459.up.railway.app/)
 
 
 ## 🛠️ Tech Stack
